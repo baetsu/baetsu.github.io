@@ -1,0 +1,120 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+* {
+    margin: 0; padding: 0;
+}
+
+.wrapper_home {
+    margin: 0 auto;
+    width: 1280px;
+    height: 100vh;
+    background-color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.home_image {
+    width: 1280px;
+    height: 60vh;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+}
+.home_content {
+    width: 1280px;
+    height: 40vh;
+    background-color: #fff;
+}
+.home_notice {
+    width: 768px;
+    height: 40vh;
+    background-color: #fff;
+    float: left;
+}
+.home_banner {
+    width: 512px;
+    height: 40vh;
+    background-color: #fff;
+    float: left;
+    text-align: center;
+}
+
+.post_title > a > label {
+    font-size: 26px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.post_title > a {
+    text-decoration: none;
+    color: darkgreen;
+    height: 100%;
+}
+.post_title > a > label:hover {
+    background-color: darkgreen;
+    color: #fff;
+}
+.wrapper_board {
+    background-color: white;
+    margin-top: 20px;
+}
+.wrapper_board > ul {
+    list-style: none;
+}
+.wrapper_board > ul > li {
+    margin-top: 12px;
+    border-bottom: 1px solid #b6b6b6;
+}
+.wrapper_board > ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+.wrapper_board > ul > li > a > span:nth-child(2) {
+    float: right;
+    width: 150px; height: 20px;
+    color: gray;
+    box-sizing: border-box;
+    text-align: center;
+}
+.wrapper_notice {
+    background-color: white;
+    margin-top: 20px;
+    display: none;
+}
+.wrapper_notice > ul {
+    list-style: none;
+}
+.wrapper_notice > ul > li {
+    margin-top: 12px;
+    border-bottom: 1px solid #b6b6b6;
+}
+.wrapper_notice > ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+.wrapper_notice > ul > li > a > span:nth-child(2) {
+    float: right;
+    width: 150px; height: 20px;
+    color: gray;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+
+
+
+.main_img {
+    width: 100%;
+    cursor: pointer;
+    object-fit: contain;
+    display: block;
+    cursor: pointer;
+}
+.banner_img {
+    width: 20rem;
+    object-fit: contain;
+    border-radius: 10px;
+}

@@ -1,0 +1,243 @@
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.board_title {
+    padding: 80px 0;
+    margin-bottom: 60px;
+}
+.board_title > h3 {
+    font-size: 28px;
+    color: #333333;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper_read {
+    width: 1280px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+
+.read_table {
+    font-size: 15px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    
+}
+.read_table th {
+    text-align: center;
+    width: 200px;
+}
+.read_table th, td {
+    padding: 14px 0;
+}
+.th_title {
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f9f7f9;
+}
+.td_title {
+    border-bottom: 1px solid #e7e7e7;
+}
+.th_writer {
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f9f7f9;
+}
+.td_writer {
+    border-bottom: 1px solid #e7e7e7;
+}
+.th_date {
+    background-color: #f9f7f9;
+}
+.read_table td {
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+
+
+
+.read_table_content {
+    display: flex;
+    justify-content: center;
+}
+.read_content {
+    width: 100%;
+    height: 16.25em;
+    resize: none;
+    border-style: none;
+    text-align: left;
+    outline: none;
+}
+.read_bottom {
+    text-align: center;
+    margin-top: 10px;
+}
+#list_btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #28a745;
+    
+    padding: 0.5rem 1rem;
+    
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    
+    display: inline;
+    justify-content: center;
+    width: auto;
+    
+    border: none;
+    border-radius: 4px;
+    
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+#modify_btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffd400;
+    
+    padding: 0.5rem 1rem;
+    
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    
+    display: inline;
+    justify-content: center;
+    width: auto;
+    
+    border: none;
+    border-radius: 4px;
+    
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+#list_btn:hover {
+    background-color: #21825B;
+}
+#modify_btn:hover {
+    background-color: #dfbd17;;
+}
+
+.read_table_content {
+    margin-top: 20px;
+}
+
+
+.reply_wrapper {
+    width: 100%;
+    background-color: #fff;
+}
+.reply_field {
+    margin-bottom: 10px;
+}
+.reply_title {
+    padding-left: 10px;
+}
+.reply_title > h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.reply_list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.reply_list > li {
+    border-bottom: 1px solid #dddddd;
+}
+.reply_date {
+    color: gray;
+}
+.reply_btn {
+    text-align: center;
+}
+#addReplyBtn {
+    text-align: center;
+}
+
+#addReplyBtn {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+.field1 {
+    font-size: 16px;
+}
+.file_label {
+    margin-top: 30px;
+    background-color: #5b975b;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 65%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#uploadFile {
+    display: none;
+}
+
+
+
+.file_list {
+    list-style: none;
+}
+.file_list > li {
+    border-bottom: 1px solid #dddddd;
+}
+.file_list > li > div {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.file_list > li > div > img {
+    width: 2.5rem;
+}
+
+
+.pagination {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin-top: 20px;
+}
+.pagination > li{
+	display: inline;
+	text-align: center;
+}
+.pagination > li > a {
+	float: left;
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 5px 12px;
+	color: #96a0ad;
+	line-height: 1.5;
+}
+.pagination > li > a:hover {
+    color: #fff;
+    background-color: #a19f9f;
+}

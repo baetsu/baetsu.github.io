@@ -1,0 +1,98 @@
+.signup_title {
+    padding: 80px 0;
+    margin-bottom: 60px;
+}
+.signup_title > h3 {
+    font-size: 28px;
+    color: #333333;
+    font-weight: 800;
+    text-align: center;
+}
+
+.wrapper_signup {
+    width: 1280px;
+    background-color: #fff;
+    margin: 0 auto;
+    height: 500px;
+    height: 1000px;
+}
+.signup_form {
+    margin: 0 auto;
+    width: 600px;
+    background-color: #fff;
+}
+.form_field {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    margin: 0 40px 15px 40px;
+    border-bottom: 1px solid #9596A2;
+}
+.form_field input {
+    width: 100%;
+    background: transparent;
+    color: #9596A2;
+    padding: 15px;
+    border: 0;
+    margin: 0;
+}
+.form_field input:focus {
+    outline: none;
+}
+.form_field *::placeholder {
+    color: rgb(162, 150, 149);
+}
+
+.wrap__auth {
+    margin: 30px 40px 15px 40px;
+    width: 80%;
+    text-align: center;
+}
+
+.auth__target{
+    display: flex;
+    justify-content: space-between;
+}
+.auth__timer {
+    display: flex;
+    justify-content: space-between;
+}
+.token {
+    width: 50%;
+    text-align: center;
+}
+.auth_button {
+    width: 50%;
+}
+
+.select__box {
+    width: 50%;
+    height: 25px;
+    margin-top: 40px;
+}
+.location_list {
+    text-align: center;
+}
+.wrap__radio {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    line-height: 55px;
+    text-align: center;
+}
+.register_btn {
+    text-align: center;
+}
+.confirm__button {
+	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	margin: 4px 2px;
+  	cursor: pointer;
+}

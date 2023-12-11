@@ -1,0 +1,98 @@
+.register_title {
+    padding: 80px 0;
+    margin-bottom: 60px;
+}
+.register_title > h3 {
+    font-size: 28px;
+    color: #333333;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper_register {
+    width: 1280px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.read_table {
+    font-size: 15px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.read_table th {
+    text-align: center;
+    width: 200px;
+    border-right: 1pxsolid #ccc;
+    background-color: #f9f7f9;
+}
+.th_writer, .td_writer {
+    border-bottom: 1px solid #e7e7e7;
+}
+.read_table td {
+    text-align: left;
+    padding-left: 10px;
+}
+.read_table th, td {
+    padding: 14px 0;
+}
+.read_table input[name="title"] {
+    height: 30px;
+    width: 100%;
+}
+.title_area {
+    border: none;
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.title_area:focus {
+    outline: none;
+}
+
+.written_area {
+    width: 100%;
+    height: 16.25em;
+    resize: none;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.written_area:focus {
+    outline: none;
+}
+
+.field1 {
+    font-size: 16px;
+}
+
+
+
+
+.file_list {
+    list-style: none;
+}
+.file_list > li {
+    border-bottom: 1px solid #dddddd;
+}
+.file_list > li > div {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.file_list > li > div > img {
+    width: 2.5rem;
+}
+
+.register_submit {
+    text-align: center;
+}
+.uploadResult {
+	padding-bottom: 200px;
+}

@@ -1,0 +1,114 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.modify_title {
+    padding: 80px 0;
+    margin-bottom: 60px;
+}
+.modify_title > h3 {
+    font-size: 28px;
+    color: #333333;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper_modify {
+    width: 1280px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+
+.read_table {
+    font-size: 15px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.read_table th {
+    text-align: center;
+    width: 200px;
+    border-right: 1pxsolid #ccc;
+    background-color: #f9f7f9;
+}
+.th_num, .th_title, .th_writer  {
+    border-bottom: 1px solid #e7e7e7;
+}
+.td_num, .td_title, .td_writer {
+    border-bottom: 1px solid #e7e7e7;
+}
+.read_table td {
+    text-align: left;
+    padding-left: 10px;
+}
+.read_table th, td {
+    padding: 14px 0;
+}
+
+.read_table input[name="bno"] {
+    border: none;
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    background-color: #fff;
+}
+.read_table input[name="writer"] {
+    border: none;
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    background-color: #fff;
+}
+.read_table input[name="regDate"] {
+    border: none;
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    background-color: #fff;
+}
+.form_control:focus {
+    outline: none;
+}
+
+
+
+.read_content {
+    width: 100%;
+    height: 16.25em;
+    resize: none;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.read_content:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+.file_list {
+    list-style: none;
+}
+.file_list > li {
+    border-bottom: 1px solid #dddddd;
+}
+.file_list > li > div {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.file_list > li > div > img {
+    width: 2.5rem;
+}
+
+.btn_list {
+    text-align: center;
+    padding-bottom: 200px;
+}
