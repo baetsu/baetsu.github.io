@@ -32,18 +32,13 @@ public class ReplyController {
 	private ReplyService service;
 	
 	@GetMapping(value = "/pages/{bno}",
-		//produces = 해당 형태로 데이터를 보내겠다
-			produces = { MediaType.APPLICATION_JSON_VALUE,
-					MediaType.APPLICATION_XML_VALUE})
+		produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
 	public ResponseEntity<List<ReplyVO>> getList(@PathVariable("bno") Long bno) {
-		//리스트 형태로 가져옴(jason형변환 알아서 해줌)
 		List<ReplyVO> list = service.getList(bno);
 		log.info("list: " + list);
 		return new ResponseEntity<>(list, HttpStatus.OK);
 	}
-	//consumes = json형으로 데이터가 들어오는 것을 처리하겠다
 	@PostMapping(value = "/new", consumes = "application/json",
-			//produces = (최종 결과물)String형으로 보내겠다
 			produces = { MediaType.TEXT_PLAIN_VALUE })
 	public ResponseEntity<String> register(@RequestBody ReplyVO vo) {
 		log.info("ReplyVO: " + vo);
