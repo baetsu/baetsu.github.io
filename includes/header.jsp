@@ -34,28 +34,28 @@
             		<c:choose>
 	                <c:when test="${!empty auth}">
 	                	<li>	                	
-							<span class="user_login">
-								<strong><c:out value="${auth.username}"/></strong>
-								님, 환영합니다!
-							</span>
-						</li>
-						<li>
-                        	<a href="/member/logout" class="user_logout"><span>로그아웃</span></a>
-                    	</li>
-					</c:when>
-					<c:otherwise>
-						<li>
-	                        <a href="/member/login" class="user_logout">
-	                            <span>로그인</span>
+					<span class="user_login">
+						<strong><c:out value="${auth.username}"/></strong>
+						님, 환영합니다!
+					</span>
+				</li>
+				<li>
+                        		<a href="/member/logout" class="user_logout"><span>로그아웃</span></a>
+                    		</li>
+			</c:when>
+			<c:otherwise>
+				<li>
+		                        <a href="/member/login" class="user_logout">
+		                            <span>로그인</span>
 	                        </a>
-                    	</li>
-                    	<li>
-	                        <a href="/member/signup" class="user_logout">
-	                            <span>회원가입</span>
+                    		</li>
+                    		<li>
+		                        <a href="/member/signup" class="user_logout">
+		                            <span>회원가입</span>
 	                        </a>
-                    	</li>
-					</c:otherwise>
-					</c:choose>
+                    		</li>
+			</c:otherwise>
+			</c:choose>
             	</ul>
                 
 
