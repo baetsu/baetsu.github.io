@@ -56,12 +56,10 @@ public class BoardController {
 	//게시판 화면
 	//페이징 기능 추가
 	@GetMapping("/list")
-	//creteria의 변수 2개(pageNum, amount)를 가져옴
 	public String boardList(Criteria criteria, Model model, Long bno) {
 		List<BoardVO> list = boardService.getList(criteria);
 		model.addAttribute("list", list);
 		int total = boardService.getTotal(criteria);
-		//키값 = pageDTO -> list.jsp의 ${pageDTO.prev}
 		model.addAttribute("pageDTO", new PageDTO(criteria, total));
 		log.info(list + "total: " + total + "  " + criteria.getListLink());
 		return "/board/list";
@@ -70,9 +68,7 @@ public class BoardController {
 	@GetMapping("/get")
 	public String getBno(@RequestParam("bno") Long bno, Model model,
 						Criteria criteria) {
-		//쿼리를 통해서 데이터가 넘어옴
 		BoardVO boardVO = boardService.get(bno);
-		//"vo" = 프엔에서 쓰이는 키값
 		model.addAttribute("vo", boardVO);
 		return "/board/get";
 	}
