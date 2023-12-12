@@ -85,11 +85,11 @@
                     
                     <c:choose>
                     <c:when  test="${!empty auth}">
-						<li>
-							<a href="/place/main">
-		                    	<span class="menu_item">공간대관</span>
-		                    </a>
-		                </li>                
+			<li>
+				<a href="/place/main">
+					<span class="menu_item">공간대관</span>
+				</a>
+			</li>                
                     </c:when>
                     <c:otherwise>
                     	<li>
@@ -98,7 +98,7 @@
                     		</a>
                     	</li>
                     </c:otherwise>
-					</c:choose>
+		    </c:choose>
                 </ul>
             </nav>
         </div>
