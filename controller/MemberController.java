@@ -24,17 +24,13 @@ public class MemberController {
 	private MemberService memberService;
 	
 	@GetMapping("/signup")
-	//jsp를 리턴하므로 String형
 	public String signupForm() {
-		//화면에 회원가입페이지 가져오기
 		return "/member/signupForm";
 	}
 	
 	@PostMapping("/signup")
-	//입력하고 회원가입 버튼 클릭시 form에 입력된 데이터들 가져오기
 	//@ModelAttribute생략
 	public String signupForm2(MemberVO vo, HttpSession session) {
-		//signup호출 = DB에 데이터 저장
 		log.info("비밀번호1:" + vo.getUserpw());
 		memberService.signup(vo);
 		log.info("비밀번호2:" + vo.getUserpw());
@@ -44,10 +40,8 @@ public class MemberController {
 			AuthVO authVO = memberService.authenticate(vo);
 			session.setAttribute("auth", authVO);
 		} catch (Exception e) {
-			
+			e.printstacktrace();
 		}
-		
-		//회원가입, 수정 => redirect이용
 		return "redirect:/";
 	}
 	
@@ -61,29 +55,21 @@ public class MemberController {
 			RedirectAttributes ra) {
 		try {
 			AuthVO authVO = memberService.authenticate(vo);
-			//로그인 한 사람의 정보가 session에 저장 (키값 = auth)
 			session.setAttribute("auth", authVO);
-			//필터 기능
-			//object형으로 리턴되므로 형변환해줌
 			String userURI = (String)session.getAttribute("userURI");
-			if(userURI != null) {	//값이 저장된 상태(로그인 상태)
-				//기존의 작업 삭제
+			if(userURI != null) {
 				session.removeAttribute(userURI);
 				return "redirect:" + userURI;
 			}
 			return "redirect:/";
 		} catch (Exception e) {
-			//입력한 id, pw가 없거나 안맞을 경우
-			//(memberService>try/catch>exception예외 메시지 출력)
 			ra.addFlashAttribute("error", e.getMessage());
 			ra.addFlashAttribute("memberVO", vo);
 			return "redirect:/member/login";
 		}
 	}
-	//로그아웃 - 세션 삭제 & 홈화면으로 이동 & 메시지(로그아웃 되었습니다) 출력
 	@GetMapping("/logout")
 	public String logout(HttpSession session, RedirectAttributes ra) {
-		//키값 auth제거
 		session.removeAttribute("auth");
 		ra.addFlashAttribute("msg", "logout");
 		return "redirect:/";
