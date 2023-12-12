@@ -25,9 +25,7 @@
 			console.log('test');
 			let user_id = $("#userid").val();
 			let user_pw = $("#userpw").val();
-			
 			$("#error_msg").text("");
-			
 			if(user_id == "") {
 				$("#error_msg").text("이메일을 입력해주세요.");
 				$("#userid").focus();
@@ -52,7 +50,6 @@
 		}
 		let msg = (error === "nonuser") ? "존재하지 않는 Email입니다." : "비밀번호가 일치하지 않습니다.";
 		alert(msg);
-		
 	});
 </script>
 <body>
