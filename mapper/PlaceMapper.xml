@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.joongang.mapper.PlaceMapper">
+	<select id="getResState" resultType="com.joongang.domain.PlaceVO">
+		select t.tno, t.duration, r.userid, r.resdate
+			from tbl_time t left join
+			(select * from tbl_reservation
+			where sno = #{sno} and resdate = #{resdate}) r on t.tno = r.tno order by t.tno
+	</select>
+	<insert id="insert">
+		insert into tbl_reservation (userid, sno, tno, resdate)
+		values ( #{userid}, #{sno}, #{tno}, #{resdate})
+	</insert>
+	<select id="hasReserved" resultType="int">
+		select count(*)
+		from tbl_reservation
+		where tno = #{tno} and resdate = #{resdate} and sno = #{sno}
+	</select>
+	<select id="getResInfo" resultType="com.joongang.domain.PlaceVO">
+		select r.srno, r.userid, r.sno, r.tno, r.resdate, r.regdate, t.duration
+			from tbl_reservation r
+			join tbl_time t on r.tno = t.tno
+				where userid = #{userid} and sno = #{sno} and resdate = #{resdate}
+				order by r.tno
+	</select>
+	<select id="getPlaceNo" resultType="int">
+		select sno from tbl_place
+	</select>
+</mapper>

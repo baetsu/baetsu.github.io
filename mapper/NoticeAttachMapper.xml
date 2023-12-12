@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.joongang.mapper.NoticeAttachMapper">
+	<insert id="insert">
+		insert into tbl_n_attach (uuid, uploadpath, filename, filetype, bno)
+		values (#{uuid}, #{uploadpath}, #{filename}, #{filetype}, #{bno})
+	</insert>
+	<select id="findByBno" resultType="com.joongang.domain.BoardAttachVO">
+		select * from tbl_n_attach where bno = #{bno}
+	</select>
+	<delete id="delete">
+		delete from tbl_n_attach where uuid = #{uuid}
+	</delete>
+	<delete id="deleteAll">
+		delete from tbl_n_attach where bno = #{bno}
+	</delete>
+	<select id="getOldFiles" resultType="com.joongang.domain.BoardAttachVO">
+		select * from tbl_n_attach where uploadpath = #{uploadpath}
+	</select>
+</mapper>
